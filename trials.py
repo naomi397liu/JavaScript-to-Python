@@ -85,7 +85,12 @@ def censor_vowels(word):
     # pass  # TODO: replace this line with your code
     chars = []
 
-    for letter in word
+    for letter in word:
+        if letter in ("aeiou"):
+            chars.append('*')
+        chars.append(letter)
+    
+    return "".join(chars)
 # function censorVowels(word) {
 #   const chars = [];
 
@@ -100,7 +105,11 @@ def censor_vowels(word):
 # }
 
 def snake_to_camel(string):
-    pass  # TODO: replace this line with your code
+    camel_case = []
+    words = string.split(' ')
+    for word in words:
+        camel_case.append(f'{word[0].upper()}{word.slice[1:]}')
+    return "".join(camel_case)
 # function snakeToCamel(string) {
 #   const camelCase = [];
 
@@ -113,6 +122,13 @@ def snake_to_camel(string):
 
 
 def longest_word_length(words):
+    longest = len(words[0])
+    
+    for word in words:
+        if longest < len(word):
+            longest = len(word)
+
+    return longest
     pass  # TODO: replace this line with your code
 # function longestWordLength(words) {
 #   let longest = words[0].length;
@@ -128,7 +144,11 @@ def longest_word_length(words):
 
 
 def truncate(string):
-    pass  # TODO: replace this line with your code
+    result = []
+    for char in string:
+        if len(result) == 0 or char != result[len(result)-1]:
+            result.append(char)
+    return "".join(result)
 # function truncate(string) {
 #   const result = [];
 
@@ -143,7 +163,13 @@ def truncate(string):
 
 
 def has_balanced_parens(string):
-    pass  # TODO: replace this line with your code
+    parens = 0
+    
+    for char in string:
+        if char == "(":
+            parens += 1
+
+    # pass  # TODO: replace this line with your code
 # function hasBalancedParens(string) {
 #   let parens = 0;
 
