@@ -31,8 +31,10 @@ def get_all_evens(nums):
 def get_odd_indices(items):
     result = []
 
-    for i in i
-    pass  # TODO: replace this line with your code
+    for i in items:
+        if i %2 != 0:
+            result.append(items[i])
+    # pass  # TODO: replace this line with your code
 # function getOddIndices(items) {
 #   const result = [];
 
@@ -46,7 +48,13 @@ def get_odd_indices(items):
 # }
 
 def print_as_numbered_list(items):
-    pass  # TODO: replace this line with your code
+    i = 1
+
+    for i in items:
+        print (f"{i}. {items}")
+    
+    # pass  # TODO: replace this line with your code
+
 # function printAsNumberedList(items) {
 #   let i = 1;
 
@@ -59,7 +67,12 @@ def print_as_numbered_list(items):
 
 
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    nums = []
+    num = start
+    for num < stop:
+        nums.append(num)
+        num += 1
+
 # function getRange(start, stop) {
 #   const nums = [];
 
@@ -69,7 +82,10 @@ def get_range(start, stop):
 # }
 
 def censor_vowels(word):
-    pass  # TODO: replace this line with your code
+    # pass  # TODO: replace this line with your code
+    chars = []
+
+    for letter in word
 # function censorVowels(word) {
 #   const chars = [];
 
